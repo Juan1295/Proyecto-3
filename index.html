@@ -28,9 +28,22 @@
 <h3>
 <a id="registro-de-desplazamiento" class="anchor" href="#registro-de-desplazamiento" aria-hidden="true"><span class="octicon octicon-link"></span></a>REGISTRO DE DESPLAZAMIENTO</h3>
 
-<p></p><img src="http://hyperphysics.phy-astr.gsu.edu/hbasees/electronic/ietron/shift.gif" alt="Registro de desplazamiento"> <br>
+<p><img src="http://hyperphysics.phy-astr.gsu.edu/hbasees/electronic/ietron/shift.gif" alt="Registro de desplazamiento">   El RegistroJR consta de un arreglo de 8 flip flops conectados en serie para pasar la información atreves de dos pines del micro controlador de los cuales una actúa como el reloj que permite pasar la información por medio de flancos y la otra es la información. Para lograr pasar la información se hace un ciclo for en el software que pasa 8 bits a cada flip flop estos bits son la cuenta de los goles para los dos displays; una ve la información se encuentra en los flip flops se saca en paralelo 4 bits para el primer decodificador y los otros 4 bits para el otro codificador, donde se encarga de transformar el dato de binario a decimal en el display.<br>  `void RegistroJR(uint8_t info)
+{
+  for(int i=0;i&lt;8;i++)
+  {
+      if( info&amp;(1&lt;&lt;(i)) )
+        digitalWrite(data, HIGH);
+      else
+        digitalWrite(data, LOW);</p>
 
-<p>El RegistroJR consta de un arreglo de 8 flip flops conectados en serie para pasar la información atreves de dos pines del micro controlador de los cuales una actúa como el reloj que permite pasar la información por medio de flancos y la otra es la información. Para lograr pasar la información se hace un ciclo for en el software que pasa 8 bits a cada flip flop estos bits son la cuenta de los goles para los dos displays; una ve la información se encuentra en los flip flops se saca en paralelo 4 bits para el primer decodificador y los otros 4 bits para el otro codificador, donde se encarga de transformar el dato de binario a decimal en el display.<br>  <code>Hola Mundo !</code></p>
+<pre><code>  digitalWrite(rloj, HIGH);
+  digitalWrite(rloj, LOW);
+</code></pre>
+
+<p>}
+  digitalWrite(data, LOW);
+}`</p>
 
 <h3>
 <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span class="octicon octicon-link"></span></a>Creating pages manually</h3>
