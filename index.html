@@ -64,6 +64,16 @@
 <p>El RegistroJR consta de un arreglo de 8 flip flops conectados en serie para pasar la información atreves de dos pines del micro controlador de los cuales una actúa como el reloj que permite pasar la información por medio de flancos y la otra es la información. Para lograr pasar la información se hace un ciclo for en el software que pasa 8 bits a cada flip flop estos bits son la cuenta de los goles para los dos displays; una ve la información se encuentra en los flip flops se saca en paralelo 4 bits para el primer decodificador y los otros 4 bits para el otro codificador, donde se encarga de transformar el dato de binario a decimal en el display.</p>
 
 <h3>
+<a id="display-7-segmentos" class="anchor" href="#display-7-segmentos" aria-hidden="true"><span class="octicon octicon-link"></span></a>DISPLAY 7 SEGMENTOS.</h3>
+
+<p>Para mostrar el marcador se implementaron 2 display 7 segmentos de ánodo común los cuales son manejados con el integrado 74LS47, la entrada de cada manejador es el registro de desplazamiento que se implementó con los 8 flip flop y se explico previamente.</p>
+
+<h3>
+<a id="controlador-max7219--matriz-de-leds" class="anchor" href="#controlador-max7219--matriz-de-leds" aria-hidden="true"><span class="octicon octicon-link"></span></a>CONTROLADOR MAX7219 + MATRIZ DE LEDS</h3>
+
+<p>Para el funcionamiento del controlador Max7219 se definen tres pines digitales como salida para el DIN, CS y CLK.  Para que los datos ingresen al registro DIN (registro de 16 bits)  en primer lugar el pin CS se coloca en bajo, en el pin correspondiente a DIN se escribe un alto o bajo que será desplazado por el reloj 16 veces para así acomodar el registro.  Para sacar el controlador de modo shutdown se escribe en el registro el valor (0x0C&lt;&lt;8)|1, además para que el controlador escanee de 0 a 7 se escribe el valor (0x0B&lt;&lt;8)|7,  para prender y apagar leds se escribe en el registro el valor correspondiente a las filas y el LED que se desea prender, por ejemplo si se escribe en el registro (0x05&lt;&lt;8)|(1&lt;&lt;3) se enciende el LED 5,4.</p>
+
+<h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
 <p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
