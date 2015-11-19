@@ -19,13 +19,13 @@
     </section>
 
     <section class="main-content">
-      <h3>
-<a id="introduciÓn" class="anchor" href="#introduci%C3%93n" aria-hidden="true"><span class="octicon octicon-link"></span></a>INTRODUCIÓN.</h3>
+      <h2>
+<a id="introduciÓn" class="anchor" href="#introduci%C3%93n" aria-hidden="true"><span class="octicon octicon-link"></span></a>INTRODUCIÓN.</h2>
 
 <p>Como proyecto final del curso de Microprocesadores se decidió implementar un juego llamado Air Hockey pero de forma digital utilizando como componente fundamental un micro controlador ATMEGA328P, además de algunos  como flipflops para un registro de desplazamiento, controladores de display, display 7 segmentos y matrices de LEDs controladas con un integrado Max7219.</p>
 
-<h3>
-<a id="materiales" class="anchor" href="#materiales" aria-hidden="true"><span class="octicon octicon-link"></span></a>MATERIALES</h3>
+<h2>
+<a id="materiales" class="anchor" href="#materiales" aria-hidden="true"><span class="octicon octicon-link"></span></a>MATERIALES</h2>
 
 <p>Los materiales usados para este proyecto son:</p>
 
@@ -42,6 +42,16 @@
 <li>Matrices de LEDs.</li>
 <li>Controlador de display, Refencia MAX7219 - <a href="https://www.sparkfun.com/datasheets/Components/General/COM-09622-MAX7219-MAX7221.pdf">Datasheet</a>. </li>
 </ol>
+
+<h2>
+<a id="funcionamiento" class="anchor" href="#funcionamiento" aria-hidden="true"><span class="octicon octicon-link"></span></a>FUNCIONAMIENTO.</h2>
+
+<p>El funcionamiento detallado de las partes de proyecto se explican a continuación:</p>
+
+<h3>
+<a id="sensores-ultra-sonido" class="anchor" href="#sensores-ultra-sonido" aria-hidden="true"><span class="octicon octicon-link"></span></a>SENSORES ULTRA SONIDO.</h3>
+
+<p>Los sensores HC-SR04 cuentan con cuatro pines, el primero de estos pines es la alimentación VCC. El segundo pin es el Trig o Trigger, al cual se le envía un pulso TTL de 10 micro segundos, el tercer pin corresponde a echo y se configura como entrada para poder medir el tiempo en proporción y obtener la distancia medida, el ultimo pin corresponde a GND y va conectado a la tierra del circuito.</p>
 
 <h3>
 <a id="registro-de-desplazamiento" class="anchor" href="#registro-de-desplazamiento" aria-hidden="true"><span class="octicon octicon-link"></span></a>REGISTRO DE DESPLAZAMIENTO</h3>
