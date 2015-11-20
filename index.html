@@ -63,6 +63,8 @@
 <h3>
 <a id="display-7-segmentos" class="anchor" href="#display-7-segmentos" aria-hidden="true"><span class="octicon octicon-link"></span></a>DISPLAY 7 SEGMENTOS.</h3>
 
+<p><img src="http://controlautomaticoeducacion.com/wp-content/uploads/2015/02/display.jpg" alt="Display 7 Segmentos"></p>
+
 <p>Para mostrar el marcador se implementaron 2 display 7 segmentos de ánodo común los cuales son manejados con el integrado 74LS47, la entrada de cada manejador es el registro de desplazamiento que se implementó con los 8 flip flop y se explico previamente.</p>
 
 <h3>
@@ -73,13 +75,15 @@
 <h3>
 <a id="funciones-arduino" class="anchor" href="#funciones-arduino" aria-hidden="true"><span class="octicon octicon-link"></span></a>FUNCIONES ARDUINO.</h3>
 
-<p>Las funciones implementadas en arduino son las siguientes:
-1. writeDataN()</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>Las funciones implementadas en Arduino son las siguientes:
+1. writeDataN(int addres, int value); A esta función ingresa la dirección de la fila y la columna o también un valor para la configuración inicial, esta función no retorno nada.
+2. ClearN(); A esta función no le ingresa ningún parámetro, la función apaga todos los LEDs y no retorna ningún valor.
+3. BarraN(int dis); A esta función le ingresa la distancia medida por el sensor para posicionar las barras en la matriz de LEDs, no retorna ningún parametro.
+4. Bola(); A esta función no le ingresa ningún parámetro y es la encargada de modificar unas variables globales que modifican la dirección y posición de la bola en la matriz.
+5. Sensor(int tri, int echo); A esta función le ingresa el pin de trig y echo, retorna el valor de distancia en cm escalado.
+6. RegistroJR(uint8_t info); A esta función le ingresa la información que se quiere escribir en el registro de desplazamiento y no retorna ningún valor.
+7. ClearJr(); A esta función no le ingresa ningún valor y simplemente coloca ceros en el registro, no retorna ningún parámetro.
+8. Gol(); Es la función encargada de incrementar un contador cuando se cumplen las condiciones de marcar un gol, esta función no retorna ningún parámetro.</p>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/Juan1295/Proyecto-3">Proyecto-3</a> is maintained by <a href="https://github.com/Juan1295">Juan1295</a>.</span>
