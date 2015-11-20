@@ -54,12 +54,9 @@
 <p><img src="http://microcontrollerelectronics.com/wp-content/uploads/2014/10/HCSR04.jpg" alt="Sensor HC-SR04"></p>
 
 <h3>
-<a id="funciones-arduino" class="anchor" href="#funciones-arduino" aria-hidden="true"><span class="octicon octicon-link"></span></a>FUNCIONES ARDUINO.</h3>
-
-<h3>
 <a id="registro-de-desplazamiento" class="anchor" href="#registro-de-desplazamiento" aria-hidden="true"><span class="octicon octicon-link"></span></a>REGISTRO DE DESPLAZAMIENTO.</h3>
 
-<p><img src="http://hyperphysics.phy-astr.gsu.edu/hbasees/electronic/ietron/shift.gif" alt="Registro de desplazamiento">   </p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Registro_serie_paralelo.svg/2000px-Registro_serie_paralelo.svg.png" alt="Registro de desplazamiento">   </p>
 
 <p>El RegistroJR consta de un arreglo de 8 flip flops conectados en serie para pasar la información atreves de dos pines del micro controlador de los cuales una actúa como el reloj que permite pasar la información por medio de flancos y la otra es la información. Para lograr pasar la información se hace un ciclo for en el software que pasa 8 bits a cada flip flop estos bits son la cuenta de los goles para los dos displays; una ve la información se encuentra en los flip flops se saca en paralelo 4 bits para el primer decodificador y los otros 4 bits para el otro codificador, donde se encarga de transformar el dato de binario a decimal en el display.</p>
 
@@ -72,6 +69,12 @@
 <a id="controlador-max7219--matriz-de-leds" class="anchor" href="#controlador-max7219--matriz-de-leds" aria-hidden="true"><span class="octicon octicon-link"></span></a>CONTROLADOR MAX7219 + MATRIZ DE LEDS</h3>
 
 <p>Para el funcionamiento del controlador Max7219 se definen tres pines digitales como salida para el DIN, CS y CLK.  Para que los datos ingresen al registro DIN (registro de 16 bits)  en primer lugar el pin CS se coloca en bajo, en el pin correspondiente a DIN se escribe un alto o bajo que será desplazado por el reloj 16 veces para así acomodar el registro.  Para sacar el controlador de modo shutdown se escribe en el registro el valor (0x0C&lt;&lt;8)|1, además para que el controlador escanee de 0 a 7 se escribe el valor (0x0B&lt;&lt;8)|7,  para prender y apagar leds se escribe en el registro el valor correspondiente a las filas y el LED que se desea prender, por ejemplo si se escribe en el registro (0x05&lt;&lt;8)|(1&lt;&lt;3) se enciende el LED 5,4.</p>
+
+<h3>
+<a id="funciones-arduino" class="anchor" href="#funciones-arduino" aria-hidden="true"><span class="octicon octicon-link"></span></a>FUNCIONES ARDUINO.</h3>
+
+<p>Las funciones implementadas en arduino son las siguientes:
+1. writeDataN()</p>
 
 <h3>
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
