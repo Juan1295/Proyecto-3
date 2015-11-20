@@ -70,16 +70,18 @@
 <h3>
 <a id="controlador-max7219--matriz-de-leds" class="anchor" href="#controlador-max7219--matriz-de-leds" aria-hidden="true"><span class="octicon octicon-link"></span></a>CONTROLADOR MAX7219 + MATRIZ DE LEDS</h3>
 
+<p><img src="http://mlm-s2-p.mlstatic.com/electronicos-345701-MLM20374550257_082015-Y.jpg" alt="Controlador y Matriz 8x8"></p>
+
 <p>Para el funcionamiento del controlador Max7219 se definen tres pines digitales como salida para el DIN, CS y CLK.  Para que los datos ingresen al registro DIN (registro de 16 bits)  en primer lugar el pin CS se coloca en bajo, en el pin correspondiente a DIN se escribe un alto o bajo que será desplazado por el reloj 16 veces para así acomodar el registro.  Para sacar el controlador de modo shutdown se escribe en el registro el valor (0x0C&lt;&lt;8)|1, además para que el controlador escanee de 0 a 7 se escribe el valor (0x0B&lt;&lt;8)|7,  para prender y apagar leds se escribe en el registro el valor correspondiente a las filas y el LED que se desea prender, por ejemplo si se escribe en el registro (0x05&lt;&lt;8)|(1&lt;&lt;3) se enciende el LED 5,4.</p>
 
 <h3>
 <a id="funciones-arduino" class="anchor" href="#funciones-arduino" aria-hidden="true"><span class="octicon octicon-link"></span></a>FUNCIONES ARDUINO.</h3>
 
-<p>Las funciones implementadas en Arduino son las siguientes:
-1. writeDataN(int addres, int value); A esta función ingresa la dirección de la fila y la columna o también un valor para 
-la configuración inicial, esta función no retorno nada.</p>
+<p>Las funciones implementadas en Arduino son las siguientes:</p>
 
 <ol>
+<li><p>writeDataN(int addres, int value); A esta función ingresa la dirección de la fila y la columna o también un valor para 
+la configuración inicial, esta función no retorno nada.</p></li>
 <li><p>ClearN(); A esta función no le ingresa ningún parámetro, la función apaga todos los LEDs y no retorna ningún valor.</p></li>
 <li><p>BarraN(int dis); A esta función le ingresa la distancia medida por el sensor para posicionar las barras en la matriz de LEDs, no retorna ningún parametro.</p></li>
 <li><p>Bola(); A esta función no le ingresa ningún parámetro y es la encargada de modificar unas variables globales que modifican la dirección y posición de la bola en la matriz.</p></li>
