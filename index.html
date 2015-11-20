@@ -76,14 +76,18 @@
 <a id="funciones-arduino" class="anchor" href="#funciones-arduino" aria-hidden="true"><span class="octicon octicon-link"></span></a>FUNCIONES ARDUINO.</h3>
 
 <p>Las funciones implementadas en Arduino son las siguientes:
-1. writeDataN(int addres, int value); A esta función ingresa la dirección de la fila y la columna o también un valor para la configuración inicial, esta función no retorno nada.
-2. ClearN(); A esta función no le ingresa ningún parámetro, la función apaga todos los LEDs y no retorna ningún valor.
-3. BarraN(int dis); A esta función le ingresa la distancia medida por el sensor para posicionar las barras en la matriz de LEDs, no retorna ningún parametro.
-4. Bola(); A esta función no le ingresa ningún parámetro y es la encargada de modificar unas variables globales que modifican la dirección y posición de la bola en la matriz.
-5. Sensor(int tri, int echo); A esta función le ingresa el pin de trig y echo, retorna el valor de distancia en cm escalado.
-6. RegistroJR(uint8_t info); A esta función le ingresa la información que se quiere escribir en el registro de desplazamiento y no retorna ningún valor.
-7. ClearJr(); A esta función no le ingresa ningún valor y simplemente coloca ceros en el registro, no retorna ningún parámetro.
-8. Gol(); Es la función encargada de incrementar un contador cuando se cumplen las condiciones de marcar un gol, esta función no retorna ningún parámetro.</p>
+1. writeDataN(int addres, int value); A esta función ingresa la dirección de la fila y la columna o también un valor para 
+la configuración inicial, esta función no retorno nada.</p>
+
+<ol>
+<li><p>ClearN(); A esta función no le ingresa ningún parámetro, la función apaga todos los LEDs y no retorna ningún valor.</p></li>
+<li><p>BarraN(int dis); A esta función le ingresa la distancia medida por el sensor para posicionar las barras en la matriz de LEDs, no retorna ningún parametro.</p></li>
+<li><p>Bola(); A esta función no le ingresa ningún parámetro y es la encargada de modificar unas variables globales que modifican la dirección y posición de la bola en la matriz.</p></li>
+<li><p>Sensor(int tri, int echo); A esta función le ingresa el pin de trig y echo, retorna el valor de distancia en cm escalado.</p></li>
+<li><p>RegistroJR(uint8_t info); A esta función le ingresa la información que se quiere escribir en el registro de desplazamiento y no retorna ningún valor.</p></li>
+<li><p>ClearJr(); A esta función no le ingresa ningún valor y simplemente coloca ceros en el registro, no retorna ningún parámetro.</p></li>
+<li><p>Gol(); Es la función encargada de incrementar un contador cuando se cumplen las condiciones de marcar un gol, esta función no retorna ningún parámetro.</p></li>
+</ol>
 
       <footer class="site-footer">
         <span class="site-footer-owner"><a href="https://github.com/Juan1295/Proyecto-3">Proyecto-3</a> is maintained by <a href="https://github.com/Juan1295">Juan1295</a>.</span>
